@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<LinearLayout android:id="@+id/LinearLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_marginTop="15sp">
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:text="S:" android:textSize="24sp" android:layout_height="fill_parent"
+			android:layout_marginLeft="10sp" android:layout_gravity="left"
+			android:layout_marginRight="2sp"
+			android:ems="1" android:gravity="center"></TextView>
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_marginRight="10sp" android:id="@+id/txtS" android:inputType="number|numberDecimal" android:hint="@string/hintTxtS"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/LinearLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:textSize="24sp" android:text="U:" android:layout_height="fill_parent"
+			android:layout_marginLeft="10sp" android:layout_gravity="left"
+			android:layout_marginRight="2sp"
+			android:ems="1" android:gravity="center"></TextView>
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_marginRight="10sp" android:id="@+id/txtU" android:inputType="number|numberDecimal" android:hint="@string/hintTxtU"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/LinearLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:textSize="24sp" android:text="V:" android:layout_height="fill_parent"
+			android:layout_marginLeft="10sp" android:layout_gravity="left"
+			android:layout_marginRight="2sp"
+			android:ems="1" android:gravity="center"></TextView>
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_marginRight="10sp" android:id="@+id/txtV" android:inputType="number|numberDecimal" android:hint="@string/hintTxtV"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/LinearLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:textSize="24sp" android:text="A:" android:layout_height="fill_parent"
+			android:layout_marginLeft="10sp" android:layout_gravity="left"
+			android:layout_marginRight="2sp"
+			android:ems="1" android:gravity="center"></TextView>
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_marginRight="10sp" android:id="@+id/txtA" android:inputType="number|numberDecimal" android:hint="@string/hintTxtA"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/LinearLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:textSize="24sp" android:text="T:" android:layout_height="fill_parent"
+			android:layout_marginLeft="10sp" android:layout_gravity="left"
+			android:layout_marginRight="2sp"
+			android:ems="1" android:gravity="center"></TextView>
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_marginRight="10sp" android:id="@+id/txtT" android:inputType="number|numberDecimal" android:hint="@string/hintTxtT"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/LinearLayout02"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<Button android:layout_height="wrap_content" android:id="@+id/btnCalc"
+			android:gravity="center" android:text="@string/calcuate"
+			android:layout_width="fill_parent" android:layout_weight="1"></Button>
+		<Button android:layout_height="wrap_content" android:id="@+id/btnClear"
+			android:text="@string/clear" android:layout_width="fill_parent"
+			android:layout_weight="1"></Button>
+	</LinearLayout>
+<TextView android:id="@+id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/madeBy" android:textSize="10sp"></TextView>
+</LinearLayout>
