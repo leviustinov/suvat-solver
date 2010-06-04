@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">设置</string>
+	
+	<string name="app_name">SUVAT Solver</string>
+	<string name="calcuate">计算</string>
+	<string name="clear">清除</string><string name="lacknumsentered">请输入至少3个值！</string>
+	<string name="ok">确定</string>
+	<string name="invalidVal">请为以下参数输入一个有效值：</string>
+	<string name="S">距离</string>
+	<string name="U">初速度</string>
+
+	<string name="V">末速度</string>
+	<string name="A">加速度</string>
+	<string name="T">时间</string>
+	
+<string name="madeBy">~由confuded制作</string>
+<string name="hintTxtS">距离(m)...</string>
+<string name="hintTxtU">初速度 (m/s)...</string>
+<string name="hintTxtV">末速度(m/s)...</string>
+<string name="hintTxtA">加速度(m/s^2)...</string>
+<string name="hintTxtT">时间(s)...</string>
+<string name="toomanynums">请只输入 SUVAT 5个变量中的3个！</string>
+
+<string name="about">关于</string>
+<string name="about_description">这是我的第一个Android软件，同时也是第二个Java程序。程序及其源码在 GPLv2及更高版协议下予以授权。源码可以从http://code.google.com/p/suvat-solver获得。了解更多信息或报告错误，请点击这个链接...</string>
+<string name="copy">复制</string>
+<string name="S:">距离:</string>
+<string name="U:">初速度:</string>
+<string name="V:">末速度:</string>
+<string name="A:">加速度:</string>
+<string name="T:">时间:</string>
+<string name="goAPK.com">安智网汉化 http:/goapk.com.</string>
+</resources>

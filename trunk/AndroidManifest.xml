@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.suvatSolver" android:versionCode="3" android:versionName="1.1 : Added Chinese support thanks to goApk.com">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".suvatSolver"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    <activity android:label="@string/about" android:name="activityAbout"></activity>
+</application>
+    <uses-sdk android:minSdkVersion="3" />
+
+</manifest> 
