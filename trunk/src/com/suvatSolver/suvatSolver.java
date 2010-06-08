@@ -86,21 +86,7 @@ public class suvatSolver extends Activity implements OnClickListener {
 		txtT = (TextView) findViewById(R.id.txtT);
 
 		/* initialise the text fields according to suvat object's values: */
-		try {
-			txtS.setText(suvat.isSet('s') ? format.format(suvat.retrieve('s'))
-					: "");
-			txtU.setText(suvat.isSet('u') ? format.format(suvat.retrieve('u'))
-					: "");
-			txtV.setText(suvat.isSet('v') ? format.format(suvat.retrieve('v'))
-					: "");
-			txtA.setText(suvat.isSet('a') ? format.format(suvat.retrieve('a'))
-					: "");
-			txtT.setText(suvat.isSet('t') ? format.format(suvat.retrieve('t'))
-					: "");
-		} catch (Exception e) {
-			if (LogOn)
-				Log.d(DBG_NAME, "Incorrect suvat char parameter passed!");
-		}
+		updateTxtValuesFromSuvat();
 
 		/* Define button listeners */
 		btnCalc.setOnClickListener(this);
@@ -126,32 +112,20 @@ public class suvatSolver extends Activity implements OnClickListener {
 				if (LogOn)
 					Log.d("SUVAT resolver", "Less than 3 variables entered!");
 				return;
-			} else { // all is well, 3 variables entered
+			} else if (varCount == 3) { // all is well, 3 variables entered
 				// reconstruct the suvat particle
 				suvat = new Suvat(values, flags);
 				// resolve the values
 				suvat.resolve();
-
-				// update values
-				for (int i = 0; i < 5; i++) {
-					try {
-						values[i] = suvat.retrieve(Suvat.suvatChar[i]); // retrieve
-					} catch (Exception e) {
-						if (LogOn)
-							Log.d(DBG_NAME, "Check your code!", e);
-					}
-				}
-				// update on screen values
-				txtS.setText(format.format(values[0]));
-				txtU.setText(format.format(values[1]));
-				txtV.setText(format.format(values[2]));
-				txtA.setText(format.format(values[3]));
-				txtT.setText(format.format(values[4]));
+				// update screen values
+				updateTxtValuesFromSuvat();
+				// clear suvat object
+				suvat = new Suvat();
 			}
 			break;
 		case R.id.btnClear:
-			// clear the variables in the object
-			suvat.clearAll();
+			// clear the suvat object
+			suvat = new Suvat();
 			// clear the text in the text boxes
 			clearTextBoxes();
 			break;
@@ -263,8 +237,26 @@ public class suvatSolver extends Activity implements OnClickListener {
 		txtT.setText("");
 	}
 
+	private void updateTxtValuesFromSuvat() {
+		try {
+			txtS.setText(suvat.isSet('s') ? format.format(suvat.retrieve('s'))
+					: "");
+			txtU.setText(suvat.isSet('u') ? format.format(suvat.retrieve('u'))
+					: "");
+			txtV.setText(suvat.isSet('v') ? format.format(suvat.retrieve('v'))
+					: "");
+			txtA.setText(suvat.isSet('a') ? format.format(suvat.retrieve('a'))
+					: "");
+			txtT.setText(suvat.isSet('t') ? format.format(suvat.retrieve('t'))
+					: "");
+		} catch (Exception e) {
+			if (LogOn)
+				Log.d(DBG_NAME, "Incorrect suvat char parameter passed!");
+		}
+	}
+
 	private void retrieveSuvat() {
-		//null the variable count
+		// null the variable count
 		varCount = 0;
 		// build up the two arrays...
 		if (!txtS.getText().toString().equals("")) {
@@ -279,6 +271,8 @@ public class suvatSolver extends Activity implements OnClickListener {
 							+ txtS.getText().toString());
 				return;
 			}
+		} else {
+			flags[0] = false;
 		}
 		if (!txtU.getText().toString().equals("")) {
 			try {
@@ -292,6 +286,8 @@ public class suvatSolver extends Activity implements OnClickListener {
 				showDialog(DIALOG_BADU_ID);
 				return;
 			}
+		} else {
+			flags[1] = false;
 		}
 		if (!txtV.getText().toString().equals("")) {
 			try {
@@ -305,6 +301,8 @@ public class suvatSolver extends Activity implements OnClickListener {
 				showDialog(DIALOG_BADV_ID);
 				return;
 			}
+		} else {
+			flags[2] = false;
 		}
 		if (!txtA.getText().toString().equals("")) {
 			try {
@@ -318,6 +316,8 @@ public class suvatSolver extends Activity implements OnClickListener {
 				showDialog(DIALOG_BADA_ID);
 				return;
 			}
+		} else {
+			flags[3] = false;
 		}
 		if (!txtT.getText().toString().equals("")) {
 			try {
@@ -331,6 +331,8 @@ public class suvatSolver extends Activity implements OnClickListener {
 				showDialog(DIALOG_BADT_ID);
 				return;
 			}
+		} else {
+			flags[4] = false;
 		}
 	}
 }
