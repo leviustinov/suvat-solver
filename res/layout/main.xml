@@ -11,7 +11,7 @@
 			android:text="@string/S:" android:gravity="right|center_vertical" android:layout_weight="0.1" android:layout_marginRight="5sp"></TextView>
 		<EditText android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginRight="10sp" android:id="@+id/txtS" android:inputType="number|numberDecimal" android:hint="@string/hintTxtS"></EditText>
+			android:layout_marginRight="10sp" android:id="@+id/txtS" android:hint="@string/hintTxtS" android:inputType="number|numberSigned|numberDecimal"></EditText>
 	</LinearLayout>
 	<LinearLayout android:id="@+id/LinearLayout01"
 		android:layout_height="wrap_content" android:layout_width="fill_parent">
@@ -21,7 +21,7 @@
 			android:gravity="right|center_vertical" android:layout_weight="0.1" android:layout_marginRight="5sp"></TextView>
 		<EditText android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginRight="10sp" android:id="@+id/txtU" android:inputType="number|numberDecimal" android:hint="@string/hintTxtU"></EditText>
+			android:layout_marginRight="10sp" android:id="@+id/txtU" android:hint="@string/hintTxtU" android:inputType="number|numberSigned|numberDecimal"></EditText>
 	</LinearLayout>
 	<LinearLayout android:id="@+id/LinearLayout01"
 		android:layout_height="wrap_content" android:layout_width="fill_parent">
@@ -31,7 +31,7 @@
 			android:gravity="right|center_vertical" android:layout_weight="0.1" android:layout_marginRight="5sp"></TextView>
 		<EditText android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginRight="10sp" android:id="@+id/txtV" android:inputType="number|numberDecimal" android:hint="@string/hintTxtV"></EditText>
+			android:layout_marginRight="10sp" android:id="@+id/txtV" android:hint="@string/hintTxtV" android:inputType="number|numberSigned|numberDecimal"></EditText>
 	</LinearLayout>
 	<LinearLayout android:id="@+id/LinearLayout01"
 		android:layout_height="wrap_content" android:layout_width="fill_parent">
@@ -41,7 +41,7 @@
 			android:gravity="right|center_vertical" android:layout_weight="0.1" android:layout_marginRight="5sp"></TextView>
 		<EditText android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginRight="10sp" android:id="@+id/txtA" android:inputType="number|numberDecimal" android:hint="@string/hintTxtA"></EditText>
+			android:layout_marginRight="10sp" android:id="@+id/txtA" android:hint="@string/hintTxtA" android:inputType="number|numberSigned|numberDecimal"></EditText>
 	</LinearLayout>
 	<LinearLayout android:id="@+id/LinearLayout01"
 		android:layout_height="wrap_content" android:layout_width="fill_parent">
@@ -51,7 +51,7 @@
 			android:gravity="right|center_vertical" android:layout_weight="0.05" android:layout_marginRight="5sp"></TextView>
 		<EditText android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginRight="10sp" android:id="@+id/txtT" android:inputType="number|numberDecimal" android:hint="@string/hintTxtT"></EditText>
+			android:layout_marginRight="10sp" android:id="@+id/txtT" android:hint="@string/hintTxtT" android:inputType="number|numberSigned|numberDecimal"></EditText>
 	</LinearLayout>
 	<LinearLayout android:id="@+id/LinearLayout02"
 		android:layout_height="wrap_content" android:layout_width="fill_parent">
